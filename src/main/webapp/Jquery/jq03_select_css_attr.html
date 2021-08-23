@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="jquery-3.6.0.js"></script>
+<script>
+   $(function(){
+     $("body").css("background-color","pink");
+     $("#userid").attr("value","ksc7662");
+     $("#userid").prop("readonly",true);
+
+     $("img").css('width','200px').css('height','250px').css('border','2px solid red');
+
+     console.log($("#userid"))
+   });
+
+</script>
+</head>
+<body>
+<input type="text" name="userid" id="userid"/>
+<img src="../Img/a.jpg"/>
+
+</body>
+</html>

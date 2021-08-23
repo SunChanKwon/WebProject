@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <script>
+        function moveScroll(){
+            window.scrollBy(0,10);
+        }
+
+        function setIntervalStart(){
+            setIntervalStart("moveScroll()",500);
+        }
+    </script>
+</head>
+<body onload="setIntervalStart()" onmouseover="clearInterval(interval)">
+
+<h1> setInterval : 일정한 시간 간격으로 함수를 호출한다.</h1>
+<h2> 특징: 호출은 한번으로 반복수행</h2>
+<script>
+        var img =['a.jpg','glass1.gif','glass2.gif','glass3.gif'];
+
+        for(var i=0; i<img.length; i++)
+        {
+            document.write("<img src='../Img/"+img[i]+"'/><br/>");
+        }
+
+</script>
+</body>
+</html>

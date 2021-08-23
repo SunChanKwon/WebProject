@@ -1,0 +1,84 @@
+﻿body {
+    font-family: 'SDSamliphopangche_Outline';
+}
+
+.Main
+{
+    background: RGB(146,204,101);
+    width: 1200px;
+    height: 1000px;
+}
+
+
+.Main>div{
+    display: inline-block;
+    margin: 5px 40px;
+    background: white;
+    width: 1050px;
+    height: 1000px;
+}
+
+.ImgPage>img
+{
+    width: 167px;
+    height: 344px;
+}
+.BoxImg
+{
+    width: 1050px;
+    height: 72px;
+}
+.Boxtitle
+{
+    width: 167px;
+    height: 72px;
+    float: left;
+    background: RGB(146,204,101);
+}
+.title>P
+{
+    margin-top: 20px;
+    text-align: center;
+    font-style: initial;
+}
+
+.imgBottom
+{
+    width: 1050px;
+    height: 105px;
+}
+
+.imgBottom>img
+{
+    width: 167px;
+    height: 105px;
+}
+.title
+{
+    width: 1050px;
+    height: 34px;
+}
+.notice-board
+{
+    width: 1050px;
+    height: 200px;
+}
+
+.last-board
+ {
+     width: 1050px;
+     height: 155px;
+ }
+.last-board>img
+{
+    width: 855px;
+    height: 155px;
+}
+ol
+{
+    padding-top: 10px;
+}
+li
+{
+    border: 1px solid black;
+}

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<script>
+
+  var a = "5";
+  var b = "6a";
+  var c = 5;
+
+  function calc() {
+    var n10bj = document.getElementById("num1");
+    var n20bj = document.getElementById("num2");
+
+    var n1 = n10bj.value;
+    var n1 = n20bj.value;
+
+    if (!isNaN(n1) && !isNaN(N2)) {
+
+
+      var add = parseInt(n1) + parseInt(n2);
+      var minus = parseInt(n1) - parseInt(n2);
+      var mul = parseInt(n1) * parseInt(n2);
+      var div = parseInt(n1) / parseInt(n2);
+
+      var r = n1 + "+" + n2 + "=" + add + "<br/>";
+      r += n1 + "-" + n2 + "=" + minus + "<br/>";
+      r += n1 + "*" + n2 + "=" + mul + "<br/>";
+      r += n1 + "/" + n2 + "=" + div + "<br/>";
+      document.getElementById("result").innerHTML = r;
+      n10bj.value = "";
+      n20bj.value = "";
+    } else {
+      document.getElementById("result").innerHTML = "잘못입력했습니다";
+    }
+  }
+  var jData = {username:'홍길동',tel:'010-1234-5678',age:50,
+              email:{f_email:'aaaa@naverc.om',s_email:'bbbb@daum.net'}
+  }
+  document.write("<br/>이름 =",jData.username);
+  document.write("<br/>연락처 = ",jData.tel);
+  document.write("<br/>이메일=",jData.email.f_email);
+
+</script>
+<head>
+</head>
+<body>
+<br>
+<hr>
+  <input type="number" id="num1"><br>
+  <input type="number" id="num2"><br>
+
+  <input type="button" value="계산하기" onclick="calc();">
+
+  <h3>결과 :<span id="result"></span></h3><br>
+
+
+
+</body>
+</html>

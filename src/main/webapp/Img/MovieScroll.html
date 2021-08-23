@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #postView{width: 879px; height: 114px; background-color: yellow; margin: 0 auto;}
+
+        #postView>*
+        {
+            height: 144px; float:left;
+        }
+        #postView>div{
+            overflow: hidden;
+            width: 820px;
+        }
+        #imgList{
+            width: 1640px;
+            position: relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<SCRIPT>
+    function setPostImage(){
+        var tag="";
+        for(var i=1; i<=20; i++)
+        {
+            tag+= "<img src='movie"
+            if(i<10){
+                tag += "0"+i+".png'/>";
+            }
+            else{
+                tag += i+".png'/>";
+            }
+        }
+        console.log(tag);
+        document.getElementById("imgList").innerHTML=tag;
+    }
+    var left=0;
+    var step = -5;
+    var timer;
+    function postMove(){
+        document.getElementById("imgList").style.left = left+"px";
+        if(left<=-820)
+        {
+            step = 5;
+        }
+        if(left>=0)
+        {
+            step = -5;
+        }
+    }
+</SCRIPT>
+
+</head>
+
+<body onload="setPostImage(); setInterval('postMove()',200);">
+
+<div id="postView">
+        <input type="button" value="◀" onclick="stepX=-5"/>
+    <div onmouseover="clearInterval(timer = setInterval('postMove()',200))">
+        <div id="imgList"></div>
+    </div>
+    <input type="button" value="▶" onclick="stepX=-5"/>
+</div>
+
+
+
+</body>
+</html>

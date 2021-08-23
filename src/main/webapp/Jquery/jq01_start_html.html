@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script scr="jquery-3.6.0.js"></script>
+<script>
+
+    documet.write("<h1>자바스크립트..실행됨");
+    function msg(){
+      alret("msg()함수가 실행됨..");
+    }
+    //---------------------------
+    $(documet).ready(function() {
+        alert("jquery가 실행됩니다.");
+        msg();
+    });
+</script>
+<body>
+<img src="../Img/title_layer.gif"/>
+</body>
+</html>

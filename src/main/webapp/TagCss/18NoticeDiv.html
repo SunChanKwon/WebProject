@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    .container{
+      width: 1000px; margin: 0 auto;}
+    .container > img
+    {
+      width: 100%;
+    }
+
+    #notice
+    { position: absolute;
+      width: 400px; height: 400px;border: 1px solid gray;
+      left: 300px; top:300px;
+      background-color: #fff;
+      overflow:hidden;
+    }
+
+    #title{
+      height: 5px; float:left; width: 10%; background-color: #dddddd;
+    }
+    #divClose{
+      height: 10px; float:left; width: 5%;
+    }
+
+  </style>
+  <script>
+        function pageInfo(){
+          var cont = document.getElementById("container");
+          console.log(cont.style.left);
+        }
+
+        function setDivXY(){
+          document.getElementById("notice").style.left="300px";
+          document.getElementById("notice").style.top="300px";
+        }
+
+        function noticeDivClose(){
+          document.getElementById("notice").style.display="none";
+        }
+
+        var eventX,eventY,divLeft,divTop;
+
+        function divMoveStart(){
+          var notice = document.getElementById("notice").style;
+          divLeft = parseInt(notice.left);
+          divTop = parseInt(notice.top);
+
+          eventX = event.clientX;
+          eventY = event.clientY;
+
+          document.onmousemove= divDrag;
+          console.log(divLeft,divTop,eventX,eventY);
+        }
+
+        document.getElementById = function () {
+          return undefined;
+        }
+
+        function divDrag(){
+          movex = event.clientX;
+          movey = event.clientY;
+
+          var x = moveX - eventX;
+          var y = moveY - eventY;
+
+          var left = divLeft + x;
+          var top = divTop + y;
+
+
+          var notice = document.getElementById("notice");
+          notice.style.left+"px";
+          notice.style.top+"px";
+        }
+
+  </script>
+</head>
+<body onload="setDivXY()">
+<div id="container">
+  <img style="width: 100px; height: 200px;" src="../Img/a.jpg"/>
+</div>
+
+<div id="notice">
+  <div>
+    <div id="title" onmousedown="divMoveStart()">제목</div>
+    <div id="divClose" onclick="noticeDivClose()">X</div>
+  </div>
+  <div><img style="width: 100px; height: 200px;"  src="../Img/glass1.gif"/></div>
+</div>
+
+</body>
+</html>

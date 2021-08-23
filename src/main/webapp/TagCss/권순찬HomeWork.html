@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	ul,li{margin:0; padding:0; list-style-type:none;}
+	header{height:50px; background-color:yellow; width:800px; margin:0 auto;}
+	nav{height:40px; background-color:green;}
+	nav li{float:left; color:white; line-height:40px; width:25%; text-align:center;overflow: hidden;}
+	nav>ul{width:800px; height:40px; margin:0 auto;}
+	section{
+		width:800px; margin:0 auto; height:500px; background-color:#ddd;
+		position:relative;
+	}
+	footer{
+		height:100px; background-color:orange;
+	}
+	#leftBanner, #rightBanner{
+		width:100px; background-color:pink; position:absolute;
+	}
+	#leftBanner{
+		left:-100px;
+	}
+	#rightBanner{
+		left:800px;
+	}
+
+
+</style>
+	<script>
+
+		var leftSize=document.getElementById("leftBanner");
+
+		var rightSize=document.getElementById("rightBanner");
+		window.addEventListener('scroll', function(){
+			console.log(window.scrollY,leftSize);
+
+			if(window.scrollY==903)
+			{
+				//leftSize.style.height="100px";
+				alert("700이상");
+			}
+			// else if(window.scrollY<800)
+			// {
+			// 	alert("900이하");
+			// }
+		});
+
+
+
+	</script>
+</head>
+<body>
+
+	<header></header>
+	<nav>
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+		</ul>
+	</nav>
+	<div id="scrollBar" style="position:relative;overflow-y:scroll; height: 2000px;">
+		<!-- 스크롤바 추가하기!-->
+
+	<section>
+		<div >
+		<div id="leftBanner" style="height: 200px"></div>
+		<div id="rightBanner" style="height: 200px"></div>
+		</div>
+	</section>
+	</div>
+</body>
+</html>

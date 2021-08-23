@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    var data = "javascript and html";
+
+    var reg = /script/i;
+
+    var result = reg.test(data);
+    console.log(result);
+
+    function regCheck(){
+      //아이디,비밀번호 형식을 지정한다.
+      //첫번째는 영문자
+      var userid = document.getElementById("userid").value;
+      reg =/^[A-Za-z]{1}[A-Za-z0-9_]{7,11}$/; //^첫번쨰 문자부터 조건을 확인해라 $:마지막 문자까ㅏ지 조건을 확인해라
+
+      if(!reg.test(userid))
+      {
+        alert("아이디가 잘못입력되었습니다");
+        return false;
+      }
+
+      reg =/^[가-힝]{2,7}$/;
+      if(!reg.test(document.getElementById("username").value)){
+        alert("이름은 가~힝까지 2~7글자 까지 허용합니다.");
+        return false;
+      }
+                                                              //()? ->있거나 또는 없거나
+      reg=/^[A-Za-z]{8,20}[@][A-Za-z0-9]{3,10}[.][A-Za-z]{2,3}([.][A-Za-z]{2})?$/;
+
+      if(!reg.test(document.getElementById("email").value))
+      {
+        alert("이메일을 형식에 맡게 입력해주세요");
+        return false;
+      }
+
+      reg = /^(010|02|031|042)[-][0-9]{3,4}[-][0-9]{4}$/;
+
+       tel = document.getElementById("tel1").value+"-";
+          tel += document.getElementById("tel2").value+"-";
+        tel += document.getElementById("tel2").value;
+
+        if(!reg.test(te1))
+        {
+          alert("유효하지 않은 전화번호입니다");
+          return false;
+        }
+    }
+  </script>
+  <style>
+    ul,li{margin: 0;padding: 0;list-style-type: none;}
+    #frm{width: 800px; margin: 0 auto;}
+    #frmData li{ float: Left; height: 30px; line-height: 30px;border-bottom: 1px solid gray;}
+    #frmData li:nth-child(2n){width: 80%;}
+    #frmData li:nth-child(2n+1){width: 80%;}
+
+  </style>
+
+</head>
+<body>
+
+  <form method="get" action="test.jsp" onsubmit="return regCheck()">
+    <ul id="frmData">
+
+      <li> 아이디</li>
+      <li><input type="text" name="userid" id="userid" value="ksc76622"/></li>
+
+      <li>이름</li>
+      <li><input type="text" name="username" id="username" value="권순찬"/></li>
+
+      <li>주민번호</li>
+      <li><input type="text" name="jumin1" id="jumin1" value="99999"/>
+      <input type="text" name="jumin2" id="jumin2" value="999999"/></li>
+
+      <li>이메일</li>
+      <li><input type="text" name="email" id="email" value="asdfqwer@naver.com"/></li>
+
+      <li>전화번호</li>
+      <li><input type="text" name="tel1" id="tel1" value="010"/>-
+      <input type="text" name="tel2" id="tel2" value="2740"/>-
+      <input type="text" name="tel3" id="tel3" value="7662"/>
+      </li>
+
+      <li><input type="submit" value="검사하기"/></li>
+    </ul>
+  </form>
+</body>
+</html>

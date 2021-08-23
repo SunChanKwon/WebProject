@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<style>
+    textarea{width: 500px;height: 100px;}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="a.jsp" method="post">
+    <label>아이디</label>:   <input type="text" name="userid" id="userid" value="KwonSun" maxlength="10" placeholder="아이디입력" readonly/><br/>
+    <label>이름</label>:    <input type="text" name="userid" id="username"/><br/>
+    <label>비밀번호</label>: <input type="password" name="userid" id="userpw"/><br/>
+    <label>파일첨부</label>: <input type="file" name="filename" id="filename"/><br/>
+    <label>관심분야</label>: <input type="checkbox" name="intro" value="배구"/>배구
+                            <input type="checkbox" name="intro" value="축구"/>축구
+                            <input type="checkbox" name="intro" value="농구"/>농구
+
+    <label>성별</label>: <input type="radio" name="gender" value="M" checked/> 남자
+                        <input type="radio" name="gender" value="F" checked/> 여자 <br/>
+    <h2>여러줄의 텍스르 입력하는 박스</h2>
+    자기소개: <textarea name="txt">글 내용을 입력하는 곳</textarea></br>
+    콤보박스 : <select name = "comList">
+    <option value="java">자바</option>
+    <option value="javascript">자바스크립트</option>
+    <option value="html">Html</option>
+    <option value="css">스타일시트</option>
+    <option value="spring">스프링</option>
+    </select><br/>
+
+    리스트 group : <select name = "comList2">
+            <optgroup label="프론트엔드">
+                <option value="javascript">자바스크립트</option>
+                <option value="html">Html</option>
+                <option value="css" selected>스타일시트</option>
+            </optgroup>
+    <optgroup label="백엔드">
+        <option value="spring">스프링</option>
+        <option value="java">자바</option>
+    </optgroup>
+</select>
+<input type="submit" value="확인"><br>
+    <input type="image" src="../Img/a.jpg" alt="이미지"/><br>
+    <input type="reset" value="다시쓰기"/><br/>
+
+    date : <input type="date" name="date1"/><br/>
+    datetime-local : <input type="datetime-local"name="time1"><br/>
+
+</form>
+</body>
+</html>

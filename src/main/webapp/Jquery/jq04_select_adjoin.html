@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<head>
+  <script src="jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+  $(function (){
+    $("div").children(".one").css("background-color","lightblue");
+    $("#first").next().css("color","red");
+    $("#i").prev().css("border","5px solid gray");
+    $("#i").parent().css("border","5px solid blue");
+
+    $("#first").siblings().attr("font-size","40px");
+    $("#first").siblings().attr("title","선택자 연습중~!~!~!~!~!");
+  });
+</script>
+<body>
+
+<div>
+    <h1 id="first"> 인접 선택자 </h1>
+    <h1 class="one">children 선택자</h1>
+    <h1 class="one">next 선택자</h1>
+    <h4>prev 선택자</h4>
+    <h4>parennt 선택자</h4>
+    <h4>sibling 선택자</h4>
+    <h4>후손, 자손선택자</h4>
+</div>
+<img src="../Img/a.jpg"/>
+</body>
+</html>

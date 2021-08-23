@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+  function getNowDate()
+  {
+    var now = new Date();
+    document.getElementById("nowDate").innerHTML=now;
+
+  var y =now.getFullYear();
+  var m =now.getMonth()+1;
+  var d =now.getDate();
+  var h =now.getHours();
+  var M =now.getMinutes();
+  var W =now.getDay();
+
+  var WStr = "";
+  switch (w)
+  {
+      case 0: wStr = "일";break;
+      case 1: Wstr = "월";break;
+      case 2: Wstr= "화";break;
+      case 3: Wstr= "수";break;
+      case 4: Wstr= "목";break;
+      case 5: Wstr= "금";break;
+      case 6: Wstr= "토";
+  }
+  document.getElementById("nowDate").innerHTML =y+"년"+m+"월"+d+"일"+h+"시"+M+"분"+("+wStr+");
+
+  }
+  </script>
+</head>
+<body onload="getNowDate()">
+<div id="nowDate"></div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿* {
+
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.Main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(236,236,238);
+}
+
+.login {
+    width: 40%;
+    height: 100%;
+    background: white;
+    padding-top: 100px;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+.login_id {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.login_id input {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 10px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.login_pw {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.login_pw input {
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.state {
+    padding: 10px;
+    width: 80%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+button{
+   width: 20px;
+    height:30px;
+    float: left;
+}
+h{
+    float: right;
+}
+.submit {
+    margin-top: 10px;
+    width: 80%;
+}
+.submit input {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    outline: none;
+    background: rgb(76,135,238);
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+.serch
+{
+    padding-top: 50px;
+
+    width: 80%;
+    display: flex;
+
+    align-items: center;
+    font-weight: bold;
+
+}
+.serch a{
+    padding-left: 100px;
+}
+
+
+.Notice
+{
+
+}
+hr
+{
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #fff;
+}
